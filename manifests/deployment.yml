@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: graememccartneypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: graememccartneypipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: graememccartneypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: graememccartneypipelinesjavascriptdocker 
+          image: gjmcontainerregistry.azurecr.io/graememccartneypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
